@@ -32,5 +32,6 @@ Route::middleware('UserSession')->group(function () {
     Route::post('addproduct', [AddProductController::class, 'store'])->name('addproduct');
     Route::post('logout', [LogoutController::class, 'logout'])->name('logout');
     Route::post('updateproduk/{id}', [EditProdukController::class, 'update'])->name('updateproduk');
-    Route::get('paymentgateway',[PaymentIndexController::class, 'index'])->name('paymentgateway');
+    Route::post('paymentgateway',[PaymentIndexController::class, 'hargaSession'])->name('paymentgateway');
+    Route::get('payment', [PaymentIndexController::class, 'index'])->name('payment');
 });
