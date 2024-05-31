@@ -28,9 +28,9 @@ class LoginRequest extends FormRequest
     }
     public function messages(): array{
         return [
-            'username.required' => 'Username Harus Diisikan!',
-            'password.min' => 'Minimal Password 8 Digit',
-            'password.required' => 'Password Harus Diisikan!',
+            'username.required' => 'Username atau Password Salah!',
+            'password.min' => 'Username atau Password Salah!',
+            'password.required' => 'Username atau Password Salah!',
         ];
     }
 }

@@ -64,6 +64,11 @@ Halaman Registrasi
 						</div>
 					</div>
 					<div>
+					@if($errors->any())
+					<div class="font-quicksand text-sm text-red-400 pb-6">
+						<span>{{$errors->first()}}</span>
+					</div>
+						@endif
 						<button type="submit" class="font-quicksand w-full flex justify-center bg-purple-800  hover:bg-purple-700 text-gray-100 p-3  rounded-lg tracking-wide font-semibold  cursor-pointer transition ease-in duration-500">
                 Sign in
 					</div>

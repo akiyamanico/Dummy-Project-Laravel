@@ -73,9 +73,6 @@ Halaman Home
   </div>
   <div class="px-8 md:px-32 lg:px-64 ">
     <div class="block rounded-lg bg-gray-700 shadow-secondary-1 max-w-full md:max-w-64 max-h-auto dark:bg-surface-dark">
-      <a href="#!">
-        <img class="rounded-t-lg" src="https://tecdn.b-cdn.net/img/new/standard/nature/184.jpg" alt="" />
-      </a>
       <div class="p-6 text-surface dark:text-white">
         <h5 class="mb-2 text-lg md:text-xl font-helmed leading-tight">Paket 2</h5>
         <p class="mb-4 font-hellight text-base">

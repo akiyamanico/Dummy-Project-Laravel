@@ -26,7 +26,8 @@ Travel Haji Gabut | Halaman Pembayaran
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="nama" name="nama" type="text" placeholder="Nama Lengkap Anda">
-                        </div>
+                                <span>{{$errors->first('nama')}}</span>
+                            </div>
                         <div class="mb-6">
                             <label class="block text-gray-800 font-bold mb-2" for="email">
                                 Email
@@ -34,7 +35,8 @@ Travel Haji Gabut | Halaman Pembayaran
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="email" name="email" type="email" placeholder="Masukan Email Anda">
-                        </div>
+                                <span>{{$errors->first('email')}}</span>
+                            </div>
                         <div class="mb-6">
                             <label class="block text-gray-800 font-bold mb-2" for="card_number">
                                 Nomor Telpon
@@ -42,7 +44,8 @@ Travel Haji Gabut | Halaman Pembayaran
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="telpon" name="telpon" type="text" placeholder="Masukan Nomor Telpon Anda">
-                        </div>
+                                <span>{{$errors->first('telpon')}}</span>
+                            </div>
                         <div class="mb-6">
                             <label class="block text-gray-800 font-bold mb-2" for="expiration_date">
                                 Tanggal Lahir
@@ -50,7 +53,8 @@ Travel Haji Gabut | Halaman Pembayaran
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="expiration_date" name="tanggallahir" type="text" placeholder="MM / YY">
-                        </div>
+                                <span>{{$errors->first('tanggallahir')}}</span>
+                            </div>
                         <div class="mb-6">
                             <label class="block text-gray-800 font-bold mb-2">
                                 Alamat
@@ -58,7 +62,8 @@ Travel Haji Gabut | Halaman Pembayaran
                             <input
                                 class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                                 id="cvv" type="text" name="alamat" placeholder="Alamat Lengkap Anda">
-                        </div>
+                                <span>{{$errors->first('alamat')}}</span>
+                            </div>
                         <div class="mb-6">
                             <label class="block text-gray-800 font-bold mb-2" for="cvv">
                                 Bukti Pembayaran
@@ -68,7 +73,8 @@ Travel Haji Gabut | Halaman Pembayaran
                             <input
                                 class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
                                 id="file_input"  name="buktipembayaran" type="file">
-                        </div>
+                                <span>{{$errors->first('buktipembayaran')}}</span>
+                            </div>
                         <input type="hidden" name="id_paket" value="{{ session('id')  }}">
                         <button
                             class="bg-indigo-500 hover:bg-indigo-700 dark:bg-black text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
