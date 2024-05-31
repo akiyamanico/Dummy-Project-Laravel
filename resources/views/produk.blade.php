@@ -13,10 +13,10 @@ Travel Haji Gabut | Halaman Tiket
                     class="relative dark:bg-gradient-to-r from-black to-gray-500 flex items-center justify-between h-36 bg-white lg:rounded-md lg:shadow-lg lg:px-4">
                     <div class="flex-shrink-0">
                         @if($a->tersedia === 'Tidak Tersedia')
-                            <a href="#" title=""
-                                class="dark:text-red-400  text-xl text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-helmed">
+                            <span title=""
+                                class="dark:text-red-400  text-xl text-black transition-all duration-200 font-helmed">
                                 <span>{{$a->namapaket}} || Sold Out!</span>
-                            </a>
+</span>
                         @else
                             <a href="{{route('produkdetail', $a->id)}}" title=""
                                 class="dark:text-white  text-xl text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-helmed">
