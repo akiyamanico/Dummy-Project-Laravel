@@ -11,7 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        //
+        Schema::create('data_customer', function(Blueprint $table){
+            $table->id()->primary();
+            $table->string('nama');
+            $table->string('email')->unique();
+            $table->string('telpon');
+            $table->string('tanggallahir');
+            $table->string('alamat');
+            $table->string('buktipembayaran');
+            $table->string('id_paket');
+        });
+
     }
 
     /**
@@ -19,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('data_customer');
     }
 };

@@ -6,6 +6,7 @@ use App\Http\Controllers\EditProdukController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
+use App\Http\Controllers\Payment\PaymentCustomer;
 use App\Http\Controllers\Payment\PaymentIndexController;
 use App\Http\Controllers\ProductDetailController;
 use App\Http\Controllers\ProdukController;
@@ -33,5 +34,6 @@ Route::middleware('UserSession')->group(function () {
     Route::post('logout', [LogoutController::class, 'logout'])->name('logout');
     Route::post('updateproduk/{id}', [EditProdukController::class, 'update'])->name('updateproduk');
     Route::post('paymentgateway',[PaymentIndexController::class, 'hargaSession'])->name('paymentgateway');
+    Route::post('paymentprocess',[PaymentCustomer::class, 'payment'])->name('paymentprocess');
     Route::get('payment', [PaymentIndexController::class, 'index'])->name('payment');
 });

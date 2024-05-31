@@ -16,7 +16,7 @@ Travel Haji Gabut | Halaman Tiket
                             <span title=""
                                 class="dark:text-red-400  text-xl text-black transition-all duration-200 font-helmed">
                                 <span>{{$a->namapaket}} || Sold Out!</span>
-</span>
+                            </span>
                         @else
                             <a href="{{route('produkdetail', $a->id)}}" title=""
                                 class="dark:text-white  text-xl text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600 font-helmed">
