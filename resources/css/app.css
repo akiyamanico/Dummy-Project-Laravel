@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Quicksand:wght@300..700&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Helvetica Neue Medium';
+    src: url('/public/fonts/HelveticaNeueMedium.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Helvetica Neue Light';
+    src: url('/public/fonts/HelveticaNeueLight.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'CreatoDisplay-Thin';
+    src: url('/public/fonts/CreatoDisplay-Thin.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'CreatoDisplay-Light';
+    src: url('/public/fonts/CreatoDisplay-Light.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'CreatoDisplay-Regular';
+    src: url('/public/fonts/CreatoDisplay-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
