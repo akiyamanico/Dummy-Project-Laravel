@@ -11,8 +11,10 @@ Halaman Registrasi
 	<div class="flex-col flex  self-center lg:px-4 sm:max-w-2xl xl:max-w-md  z-12">
 		<div class="self-start hidden lg:flex flex-col  text-gray-300">
 			<h1 class="my-3 font-semibold text-4xl font-abel">Welcome back</h1>
-			<p class="pr-3 text-sm opacity-75 font-quicksand">Lorem ipsum is placeholder text commonly used in the graphic, print,
-				and publishing industries for previewing layouts and visual mockups</p>
+			<p class="pr-3 text-sm opacity-75 font-quicksand">
+
+Kami menawarkan profesionalisme tinggi dengan tim berpengalaman, layanan terpadu mulai dari tiket pesawat hingga bimbingan ibadah, dan perhatian personal serta bantuan tambahan untuk kenyamanan jamaah.
+			</p>
            
 		</div>
 	</div>
