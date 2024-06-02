@@ -37,3 +37,7 @@ Route::middleware('UserSession')->group(function () {
     Route::post('paymentprocess',[PaymentCustomer::class, 'payment'])->name('paymentprocess');
     Route::get('payment', [PaymentIndexController::class, 'index'])->name('payment');
 });
+
+Route::middleware('AdminSession')->group(function () {
+
+});

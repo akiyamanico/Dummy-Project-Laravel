@@ -5,7 +5,7 @@ Travel Haji Gabut | Halaman Pembayaran
 @endsection
 @section('content')
 <div class="bg-black">
-    <div class="container mx-auto p4-10 pt-28">
+    <div class="container mx-auto p4-10 pt-28 pb-12">
         <div class="bg-white rounded-lg">
             <div class="md:flex">
                 <div class="w-full px-6 py-8 md:p-8">

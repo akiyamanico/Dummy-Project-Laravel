@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\AdminSession;
 use App\Http\Middleware\GuestSession;
 use App\Http\Middleware\UserSession;
 use Illuminate\Foundation\Application;
@@ -16,6 +17,7 @@ return Application::configure(basePath: dirname(__DIR__))
         $middleware->alias([
             'UserSession' => UserSession::class,
             'GuestSession' => GuestSession::class,
+            'AdminSession' => AdminSession::class
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {

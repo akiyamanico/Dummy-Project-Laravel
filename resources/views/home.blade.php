@@ -63,7 +63,7 @@ Halaman Home
               <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
                 <div class="relative pl-9">
                   <dt class="inline font-semibold text-gray-900 dark:text-blue-200">
-                    Profesionalisme
+                    Profesionalisme | 
                   </dt>
                   <dd class="inline dark:text-gray-500 font-hellight">Kami memiliki tim yang terampil dan berpengalaman
                     dalam menyelenggarakan perjalanan umrah dan haji. Dengan dedikasi yang tinggi, kami memastikan
@@ -72,7 +72,7 @@ Halaman Home
                 </div>
                 <div class="relative pl-9">
                   <dt class="inline font-semibold text-gray-900 dark:text-blue-200">
-                    Layanan Terpadu:
+                    Layanan Terpadu | 
                   </dt>
                   <dd class="inline dark:text-gray-500 font-hellight">Kami menawarkan paket perjalanan yang lengkap dan
                     terpadu, mencakup semua kebutuhan jamaah mulai dari tiket pesawat, akomodasi, transportasi, hingga
@@ -81,7 +81,7 @@ Halaman Home
                 </div>
                 <div class="relative pl-9">
                   <dt class="inline font-semibold text-gray-900 dark:text-blue-200">
-                    Perhatian Personal:
+                    Perhatian Personal | 
                   </dt>
                   <dd class="inline dark:text-gray-500 font-hellight">Kami peduli dengan kebutuhan dan kenyamanan setiap
                     jamaah. Tim kami siap memberikan bantuan dan layanan tambahan seperti manasik umrah dan haji sebelum
