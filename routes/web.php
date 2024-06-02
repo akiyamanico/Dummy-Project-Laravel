@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\AddProductController;
+use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminLoginPageController;
+use App\Http\Controllers\Admin\AdminRegisterController;
 use App\Http\Controllers\DelProductController;
 use App\Http\Controllers\EditProdukController;
 use App\Http\Controllers\IndexController;
@@ -21,23 +24,25 @@ Route::middleware('GuestSession')->group(function () {
     Route::get('login', [LoginController::class, 'index'])->name('login');
     Route::post('register.post', [RegisterController::class, 'register'])->name('register.post');
     Route::post('login.post', [LoginController::class, 'login'])->name('login.post');
+
+    //ADMIN
+
+    Route::get('adminlogin', [AdminLoginPageController::class, 'index'])->name('adminlogin');
+    Route::get('adminregister', [AdminRegisterController::class, 'index'])->name('adminregister');
+    Route::post('adminregister.post', [AdminRegisterController::class, 'register'])->name('adminregister.post');
+    Route::post('adminlogin.post', [AdminLoginPageController::class, 'loginadmin'])->name('adminlogin.post');
 });
 
 Route::middleware('UserSession')->group(function () {
     Route::get('produk', [ProdukController::class, 'index'])->name('produk');
     Route::get('home', [IndexController::class, 'index'])->name('home');
-    Route::get('tambahproduk', [AddProductController::class, 'index'])->name('tambahproduk');
     Route::get('produkdetail/{id}', [ProductDetailController::class, 'index'])->name('produkdetail');
-    Route::get('deleteproduct/{id}', [DelProductController::class, 'delete'])->name('deleteproduct');
-    Route::get('editproduk/{id}', [EditProdukController::class, 'index'])->name('editproduk');
-    Route::post('addproduct', [AddProductController::class, 'store'])->name('addproduct');
     Route::post('logout', [LogoutController::class, 'logout'])->name('logout');
-    Route::post('updateproduk/{id}', [EditProdukController::class, 'update'])->name('updateproduk');
     Route::post('paymentgateway',[PaymentIndexController::class, 'hargaSession'])->name('paymentgateway');
     Route::post('paymentprocess',[PaymentCustomer::class, 'payment'])->name('paymentprocess');
     Route::get('payment', [PaymentIndexController::class, 'index'])->name('payment');
 });
 
 Route::middleware('AdminSession')->group(function () {
-
+    Route::get('adminlogout', [LogoutController::class, 'logout'])->name('adminlogout');
 });
