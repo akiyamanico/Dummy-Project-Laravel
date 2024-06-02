@@ -37,4 +37,16 @@
     font-weight: normal;
     font-style: normal;
   }
+  @font-face {
+    font-family: 'coolvetica rg';
+    src: url('/public/fonts/coolvetica\ rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Comfortaa Regular';
+    src: url('/public/fonts/Comfortaa-Regular.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+  }
 

@@ -15,6 +15,8 @@ export default {
         creathin: ['CreatoDisplay-Thin'],
         creal: ['CreatoDisplay-Light'],
         crear: ['CreatoDisplay-Regular'],
+        coolvetica: ['coolvetica rg'],
+        comforta: ['Comfortaa Regular'],
       },
       gridTemplateRows: {
         '[auto,auto,1fr]': 'auto auto 1fr',
