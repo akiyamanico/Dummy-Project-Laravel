@@ -24,7 +24,7 @@ class AdminLoginPageController extends Controller
                     ]
                 )
             ) {
-                return redirect()->back()->with('success', $r->username);
+                return redirect('admindashboard');
             } else {
                 return back()->with('pesan', 'Username atau Password Salah!');
             }

@@ -3,6 +3,7 @@
 use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\AdminLoginPageController;
+use App\Http\Controllers\Admin\AdminLogoutController;
 use App\Http\Controllers\Admin\AdminRegisterController;
 use App\Http\Controllers\DelProductController;
 use App\Http\Controllers\EditProdukController;
@@ -44,5 +45,6 @@ Route::middleware('UserSession')->group(function () {
 });
 
 Route::middleware('AdminSession')->group(function () {
-    Route::get('adminlogout', [LogoutController::class, 'logout'])->name('adminlogout');
+    Route::get('adminlogout', [AdminLogoutController::class, 'adminlogout'])->name('adminlogout');
+    Route::get('admindashboard', [AdminDashboardController::class, 'index'])->name('admindashboard');
 });
