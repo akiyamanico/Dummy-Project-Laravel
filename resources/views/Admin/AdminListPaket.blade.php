@@ -20,6 +20,7 @@ Halaman Dashboard
                     <th class="px-4 py-2 whitespace-nowrap">Tersedia</th>
                     <th class="px-4 py-2 whitespace-nowrap">Tanggal Berangkat</th>
                     <th class="px-4 py-2 whitespace-nowrap">Asal Keberangkatan</th>
+                    <th class="px-4 py-2 whitespace-nowrap">Aksi</th>
                 </tr>
             </thead>
             <tbody>
@@ -33,6 +34,7 @@ Halaman Dashboard
                     <td class="px-4 py-2">{{ $a->tersedia }}</td>
                     <td class="px-4 py-2">{{ $a->tanggalberangkat }}</td>
                     <td class="px-4 py-2">{{ $a->asalkeberangkatan }}</td>
+                    <td class="px-4 py-2"><a href="{{('admineditpaket/'.$a->id)}}">Edit </a>/ <a href="{{('admindeletepaket/'. $a->id)}}">Delete</a></td>
                 </tr>
                 @endforeach
             </tbody>

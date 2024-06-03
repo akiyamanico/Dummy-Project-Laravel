@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminDeletePaketController;
+use App\Http\Controllers\Admin\AdminEditPaketHajiController;
 use App\Http\Controllers\Admin\AdminKonfirmasiPembayaran;
 use App\Http\Controllers\Admin\AdminListPaketController;
 use App\Http\Controllers\Admin\AdminListUserController;
@@ -63,6 +65,9 @@ Route::middleware('AdminSession')->group(function () {
     Route::get('admintambahpenerbangan', [AdminTambahPenerbangan::class, 'index'])->name('admintambahpenerbangan');
     Route::get('admintambahpakethaji', [AdminTambahPaketHaji::class, 'index'])->name('admintambahpakethaji');
     Route::get('adminlistuser', [AdminListUserController::class, 'index'])->name('adminlistuser');
+    Route::get('admineditpaket/{id}', [AdminEditPaketHajiController::class, 'index'])->name('admineditpaket');
+    Route::get('admindeletepaket/{id}', [AdminDeletePaketController::class, 'delete'])->name('admindeletepaket');
+    Route::post('admineditpaketproses/{id?}', [AdminEditPaketHajiController::class, 'update'])->name('admineditpaketproses');
     Route::post('admintambahpenerbangan.post', [ProsesTambahPenerbangan::class, 'tambah'])->name('admintambahpenerbangan.post');
     Route::post('admintambahpaket.post', [AdminTambahPaketHajiProses::class, 'tambah'])->name('admintambahpaket.post');
 });
