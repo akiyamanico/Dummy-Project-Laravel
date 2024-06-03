@@ -34,7 +34,7 @@ Halaman Dashboard
                     <td class="px-4 py-2">{{ $a->tersedia }}</td>
                     <td class="px-4 py-2">{{ $a->tanggalberangkat }}</td>
                     <td class="px-4 py-2">{{ $a->asalkeberangkatan }}</td>
-                    <td class="px-4 py-2"><a href="{{('admineditpaket/'.$a->id)}}">Edit </a>/ <a href="{{('admindeletepaket/'. $a->id)}}">Delete</a></td>
+                    <td class="px-4 py-2"><a href="{{('admineditpaket/'.$a->id)}}">Edit </a></td>
                 </tr>
                 @endforeach
             </tbody>

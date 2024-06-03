@@ -9,10 +9,10 @@ Halaman Dashboard
     <div class="p-6 flex items-center justify-center">
         <div class="container max-w-screen-lg mx-auto">
             <div>
-                <div class="bg-white rounded shadow-lg px-4 p-8 mb-6">
-                    <div class="grid text-sm grid-cols-1 lg:grid-cols-2">
-                        <div class="text-gray-600">
-                            <p class="font-creal text-lg">Penambahan Paket Haji</p>
+                <div class="bg-slate-800   rounded shadow-lg px-4 p-8 mb-6">
+                    <div class="grid text-sm grid-cols-1 text-white lg:grid-cols-2">
+                        <div class="text-white">
+                            <p class="font-creal text-lg">Pengeditan Paket Haji</p>
                         </div>
                         <form action="{{route('admineditpaketproses',$data->id)}}" method="post">
                             @csrf
@@ -21,27 +21,27 @@ Halaman Dashboard
                                     <div class="md:col-span-5">
                                         <label>Nama Paket</label>
                                         <input type="text" name="namapaket"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="{{$data->namapaket}}" />
+                                            class="h-10 mt-1 rounded px-4 w-full bg-gray-500" value="{{$data->namapaket}}" />
                                         <span>{{$errors->first('namapaket')}}</span>
                                     </div>
                                     <div class="md:col-span-5">
                                         <label>Harga</label>
                                         <input type="text" name="harga"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="{{$data->harga}}"
+                                            class="h-10 mt-1 rounded px-4 w-full bg-gray-500" value="{{$data->harga}}"
                                             placeholder="" />
                                         <span>{{$errors->first('harga')}}</span>
                                     </div>
                                     <div class="md:col-span-5">
                                         <label>Deskripsi</label>
                                         <textarea type="text" name="deskripsi"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="{{$data->deskripsi}}"
-                                            placeholder=""></textarea>
+                                            class="h-10 mt-1 rounded px-4 w-full bg-gray-500" value="{{$data->deskripsi}}">
+                                        </textarea>
                                         <span>{{$errors->first('deskripsi')}}</span>
                                     </div>
                                     <div class="md:col-span-5">
                                         <label>Durasi</label>
                                         <input type="text" name="durasi"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="{{$data->durasi}}"
+                                            class="h-10 mt-1 rounded px-4 w-full bg-gray-500" value="{{$data->durasi}}"
                                             placeholder="" />
                                         <span>{{$errors->first('durasi')}}</span>
                                     </div>
@@ -56,13 +56,13 @@ Halaman Dashboard
                                     <div class="md:col-span-5">
                                         <label>Tanggal Berangkat</label>
                                         <input type="text" name="tanggalberangkat"
-                                            class="h-10 border mt-1 rounded px-4 w-full bg-gray-50" value="{{$data->tanggalberangkat}}"
+                                            class="h-10 mt-1 rounded px-4 w-full bg-gray-500" value="{{$data->tanggalberangkat}}"
                                             placeholder="" />
                                         <span>{{$errors->first('tanggalberangkat')}}</span>
                                     </div>
                                     <div class="md:col-span-5">
                                         <label>Asal Keberangkatan</label>
-                                        <select name="asalkeberangkatan">
+                                        <select name="asalkeberangkatan" class="bg-gray-500">
                                             @foreach($dataresult as $i => $d)
                                                 <option value="{{$d->concatenated_results}}">{{$d->concatenated_results}}
                                                 </option>
@@ -73,7 +73,7 @@ Halaman Dashboard
                                     <div class="md:col-span-5 text-right">
                                         <div class="inline-flex items-end">
                                             <button type="submit"
-                                                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+                                                class="bg-gray-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
                                         </div>
                         </form>
                     </div>

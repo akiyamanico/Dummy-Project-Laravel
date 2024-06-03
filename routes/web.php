@@ -1,8 +1,6 @@
 <?php
 
-use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\Admin\AdminDashboardController;
-use App\Http\Controllers\Admin\AdminDeletePaketController;
 use App\Http\Controllers\Admin\AdminEditPaketHajiController;
 use App\Http\Controllers\Admin\AdminKonfirmasiPembayaran;
 use App\Http\Controllers\Admin\AdminListPaketController;
@@ -18,8 +16,6 @@ use App\Http\Controllers\Admin\DeletePenerbangan;
 use App\Http\Controllers\Admin\EditPenerbangan;
 use App\Http\Controllers\Admin\ListPenerbanganController;
 use App\Http\Controllers\Admin\ProsesTambahPenerbangan;
-use App\Http\Controllers\DelProductController;
-use App\Http\Controllers\EditProdukController;
 use App\Http\Controllers\IndexController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\LogoutController;
@@ -69,7 +65,6 @@ Route::middleware('AdminSession')->group(function () {
     Route::get('adminlistuser', [AdminListUserController::class, 'index'])->name('adminlistuser');
     Route::get('admineditpaket/{id}', [AdminEditPaketHajiController::class, 'index'])->name('admineditpaket');
     Route::get('admineditpenerbangan/{id}', [EditPenerbangan::class, 'index'])->name('admineditpenerbangan');
-    Route::get('admindeletepaket/{id}', [AdminDeletePaketController::class, 'delete'])->name('admindeletepaket');
     Route::get('admindeletepenerbangan/{id}', [DeletePenerbangan::class, 'delete'])->name('admindeletepenerbangan');
     Route::post('admineditpaketproses/{id?}', [AdminEditPaketHajiController::class, 'update'])->name('admineditpaketproses');
     Route::post('admineditpenerbanganproses/{id?}', [EditPenerbangan::class, 'update'])->name('admineditpenerbanganproses');
