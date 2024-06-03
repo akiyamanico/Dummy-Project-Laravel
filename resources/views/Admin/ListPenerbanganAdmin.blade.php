@@ -15,6 +15,7 @@ Halaman Dashboard
                     <th class="px-4 py-2 whitespace-nowrap">No</th>
                     <th class="px-4 py-2 whitespace-nowrap">Nama Daerah</th>
                     <th class="px-4 py-2 whitespace-nowrap">Nama Bandara</th>      
+                    <th class="px-4 py-2 whitespace-nowrap">Aksi</th>      
                 </tr>
             </thead>
             <tbody>
@@ -23,6 +24,7 @@ Halaman Dashboard
                     <td class=" px-4 py-2">{{$i + 1}}</td>
                     <td class=" px-4 py-2">{{$d->namadaerah}}</td>
                     <td class=" px-4 py-2">{{$d->namabandara}}</td>
+                    <td class=" px-4 py-2"><a href="{{'admineditpenerbangan/'.$d->id}}">Edit</a> / <a href="{{'admindeletepenerbangan/'.$d->id}}">Delete</a></td>
                 </tr>
                 @endforeach
             </tbody>
