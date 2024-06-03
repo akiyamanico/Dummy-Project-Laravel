@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\AddProductController;
 use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\AdminKonfirmasiPembayaran;
+use App\Http\Controllers\Admin\AdminListPaketController;
 use App\Http\Controllers\Admin\AdminLoginPageController;
 use App\Http\Controllers\Admin\AdminLogoutController;
+use App\Http\Controllers\Admin\AdminProsesKonfirmasi;
 use App\Http\Controllers\Admin\AdminRegisterController;
 use App\Http\Controllers\DelProductController;
 use App\Http\Controllers\EditProdukController;
@@ -47,4 +50,7 @@ Route::middleware('UserSession')->group(function () {
 Route::middleware('AdminSession')->group(function () {
     Route::get('adminlogout', [AdminLogoutController::class, 'adminlogout'])->name('adminlogout');
     Route::get('admindashboard', [AdminDashboardController::class, 'index'])->name('admindashboard');
+    Route::get('adminlistpaket', [AdminListPaketController::class, 'index'])->name('adminlistpaket');
+    Route::get('adminkonfirmasi/{id}', [AdminProsesKonfirmasi::class, 'konfirmasi'])->name('adminkonfirmasi');
+    Route::get('adminkonfirmasipembayaran', [AdminKonfirmasiPembayaran::class, 'index'])->name('adminkonfirmasipembayaran');
 });

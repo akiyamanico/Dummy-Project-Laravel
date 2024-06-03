@@ -15,11 +15,12 @@ class PaymentCustomer extends Controller
             $r->buktipembayaran->move('buktipembayaran',$bukti);
             DB::table('data_customer')->insert([
                 'nama' => $r->nama,
-                'email' => $r->alamat,
+                'email' => $r->email,
                 'telpon' => $r->telpon,
                 'tanggallahir' => $r->tanggallahir,
                 'alamat' => $r->alamat,
                 'buktipembayaran' => $bukti,
+                'statuspembayaran' => 'Belum Dikonfirmasi',
                 'id_paket' => $r->id_paket,
             ]);
             return redirect('/');
