@@ -5,12 +5,11 @@ Halaman Dashboard
 @endsection
 
 @section('content')
-<div class="mx-64  fixed pt-8 ">
+<div class="mx-72 fixed pt-8">
 
-    <span class="text-4xl text-center font-quicksand">Daftar Paket Haji</span>
-    <div
-        class="flex flex-col pt-5 pb-5 bg-neutral-800 text-wrap table-auto -mr-24 rounded-xl shadow-2xl font-quicksand font-light">
-        <table class=" w-full">
+    <span class="text-4xl text-center font-quicksand">Konfirmasi Pembayaran Pengguna!</span>
+    <div class="flex text-sm flex-col pt-5 pb-5 bg-neutral-800 text-wrap table-auto max-w-screen-xl max-h-screen overflow-auto -mr-24 rounded-xl shadow-2xl font-quicksand font-light">
+        <table class="w-full">
             <thead>
                 <tr>
                     <th class="px-4 py-2 whitespace-nowrap">No</th>
@@ -27,26 +26,26 @@ Halaman Dashboard
             </thead>
             <tbody>
                 @foreach($data as $index => $d)
-                    <tr>
-                        <td class="px-4 py-2">{{ $index + 1 }}</td>
-                        <td class="px-4 py-2">{{ $d->nama }}</td>
-                        <td class="px-4 py-2">{{ $d->email }}</td>
-                        <td class="px-4 py-2">{{ $d->telpon }}</td>
-                        <td class="px-4 py-2">{{ $d->tanggallahir }}</td>
-                        <td class="px-4 py-2">{{ $d->alamat }}</td>
-                        <td class="px-4 py-2"><img src="{{asset('buktipembayaran/' . $d->buktipembayaran)}}" </td>
-                        <td class="px-4 py-2">{{ $d->namapaket }}</td>
-                        <td class="px-4 py-2">{{ $d->harga }}</td>
-                        @if($d->statuspembayaran ==="Belum Dikonfirmasi")
-                        <td class="px-4 py-2"><a href="{{('adminkonfirmasi/'.$d->id)}}">Konfirmasi</a></td>
-                        @else
-                        <td class="px-4 py-2">{{$d->statuspembayaran}}</td>
-                        @endif
-                    </tr>
+                <tr>
+                    <td class="px-4 py-2">{{ $index + 1 }}</td>
+                    <td class="px-4 py-2">{{ $d->nama }}</td>
+                    <td class="px-4 py-2">{{ $d->email }}</td>
+                    <td class="px-4 py-2">{{ $d->telpon }}</td>
+                    <td class="px-4 py-2">{{ $d->tanggallahir }}</td>
+                    <td class="px-4 py-2">{{ $d->alamat }}</td>
+                    <td class="px-4 py-2"><img src="{{ asset('buktipembayaran/' . $d->buktipembayaran) }}"></td>
+                    <td class="px-4 py-2">{{ $d->namapaket }}</td>
+                    <td class="px-4 py-2">{{ $d->harga }}</td>
+                    @if($d->statuspembayaran === "Belum Dikonfirmasi")
+                    <td class="px-4 py-2"><a href="{{ url('adminkonfirmasi/' . $d->id) }}">Konfirmasi</a></td>
+                    @else
+                    <td class="px-4 py-2">{{ $d->statuspembayaran }}</td>
+                    @endif
+                </tr>
                 @endforeach
             </tbody>
         </table>
-        <span class="text-xl text-center font-quicksand">Tambah Paket Haji</span>
+        <a href="{{ route('admintambahpakethaji') }}" class="text-xl text-center font-quicksand">Tambah Paket Haji</a>
     </div>
 </div>
 
