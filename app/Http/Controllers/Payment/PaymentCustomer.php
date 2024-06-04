@@ -23,6 +23,9 @@ class PaymentCustomer extends Controller
                 'statuspembayaran' => 'Belum Dikonfirmasi',
                 'id_paket' => $r->id_paket,
             ]);
+            $r->session()->forget('harga');
+            $r->session()->forget('id');
+            $r->session()->forget('namapaket');
             return redirect('/');
         }
     }
