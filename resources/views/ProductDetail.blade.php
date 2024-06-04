@@ -68,21 +68,6 @@ Halaman Home
       {{$paketdata->deskripsi}}
     </span>
   </div>
-  <div class="container text-2xl md:text-3xl text-white font-hellight pt-4 py-4 px-8 md:px-24 lg:px-48">
-    <span>Paket Haji Lainnya</span>
-  </div>
-  <div class="px-8 md:px-32 lg:px-64 ">
-    <div class="block rounded-lg bg-gray-700 shadow-secondary-1 max-w-full md:max-w-64 max-h-auto dark:bg-surface-dark">
-      <div class="p-6 text-surface dark:text-white">
-        <h5 class="mb-2 text-lg md:text-xl font-helmed leading-tight">Paket 2</h5>
-        <p class="mb-4 font-hellight text-base">
-          Lorem Ipsum
-        </p>
-        <button type="button" class="inline-block rounded bg-gray-500 shadow-inner px-6 pb-2 pt-2.5 text-xs md:text-sm font-quicksand uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong">
-          Button
-        </button>
-      </div>
-    </div>
   </div>
 
   @include('navbar')
