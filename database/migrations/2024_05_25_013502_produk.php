@@ -15,10 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('namapaket');
             $table->integer('harga');
-            $table->string('deskripsi');
+            $table->longText('deskripsi');
             $table->string('durasi');
             $table->string('tersedia');
             $table->string('tanggalberangkat');
+            $table->string('asalkeberangkatan');
             $table->timestamps();
         });
     }

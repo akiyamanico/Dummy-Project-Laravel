@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('tanggallahir');
             $table->string('alamat');
             $table->string('buktipembayaran');
+            $table->string('statuspembayaran');
             $table->string('id_paket');
         });
 
